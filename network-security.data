@@ -1,0 +1,5 @@
+(
+ (:id "sha1:018e747eb6724b347a8088e1992afb6db8054a57" :fingerprints ("sha1:ea:57:a7:79:ee:9b:2b:60:8a:49:6c:7d:f9:75:0a:63:60:41:71:28") :conditions nil)
+ (:id "sha1:1281e6b8174642f83221222c6f4835ad92f32136" :fingerprints ("sha1:66:b0:a2:d6:0c:c0:09:48:cc:7f:b5:56:4d:34:5f:03:7e:a0:61:be") :conditions nil)
+ (:id "sha1:ff64f82078ae4cd7abafb258917f055383a6f715" :fingerprints ("sha1:65:4c:fc:37:4f:b0:31:67:90:6e:84:33:52:61:c3:3e:c8:af:b3:42") :host "www.baidu.com:443" :conditions (:renegotiation-info-ext))
+)

@@ -1,0 +1,52 @@
+;;; 本文设置所有全局快捷键
+
+;; 取消C-j的快捷键设置，所有自定义快捷键以C-j开头
+(global-set-key (kbd "C-j") nil)
+
+;; 设置run-python命令快捷键C-j C-p
+(global-set-key (kbd "C-j C-p") 'run-python)
+
+;; 设置python-shell-send-buffer命令快捷键C-j C-c
+(global-set-key (kbd "C-j C-c") 'python-shell-send-buffer)
+
+;; 设置py-execute-buffer命令快捷键C-j |
+(global-set-key (kbd "C-j |") 'py-execute-buffer)
+
+;; 设置C-x p为返回上一个窗口，和C-x o相反
+; 定义返回上n个窗口函数
+(defun other-window-backward (&optional n)
+  "Select Nth previous window(1 by default)."
+  (interactive "P")
+  (other-window (- (prefix-numeric-value n))))
+; 绑定快捷键
+(global-set-key (kbd "C-x p") 'other-window-backward)
+
+;; 设置C-<为将光标返回到窗口左上角（注意：不是buffer左上角！）
+; 定义将光标返回窗口左上角的函数
+(defun point-to-top ()
+  "Put point on top line of window."
+  (interactive)
+  (move-to-window-line 0))
+; 绑定快捷键
+(global-set-key (kbd "C-<") 'point-to-top)
+
+;; 设置C->为将光标返回到窗口左下角（注意：不是buffer左下角！）
+; 定义将光标返回窗口左下角的函数
+(defun point-to-bottom ()
+  "Put point at beginning of last visible line."
+  (interactive)
+  (move-to-window-line -1))
+; 绑定快捷键
+(global-set-key (kbd "C->") 'point-to-bottom)
+
+;; 设置C-^为将光标所在的行滚动到窗口的顶端（注意：不是buffer的顶端！）
+; 定义将光标所在行滚动到窗口顶端的函数
+(defun line-to-top ()
+  "Move current line to top of window."
+  (interactive)
+  (recenter 0))
+; 绑定快捷键
+(global-set-key (kbd "C-^") 'line-to-top)
+
+(provide 'init-keys)
+

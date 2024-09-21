@@ -1,0 +1,80 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("A类题库(v20211022).txt"
+ (filename . "~/文档/电子书/TXT题库包(v20211022)/A类题库(v20211022).txt")
+ (front-context-string . "\n[Q]A类业余无线电台允许发射")
+ (rear-context-string . "度\n[P]\n\n[I]LK0014")
+ (position . 2253))
+("chinapaper.cls"
+ (filename . "~/texmf/tex/latex/chinapaper/chinapaper.cls")
+ (front-context-string . "		afterskip = 1.")
+ (rear-context-string . "2ex minus .2ex,\n")
+ (position . 4266))
+("sources.list"
+ (filename . "/etc/apt/sources.list")
+ (front-context-string . "# 一共四对主流境像地址, 默认")
+ (rear-context-string)
+ (position . 1))
+("rili.tex"
+ (filename . "~/temp/tex/rili.tex")
+ (front-context-string . "% !TEX program=x")
+ (rear-context-string)
+ (position . 1))
+("Nutstore Files"
+ (filename . "~/Nutstore Files/")
+ (front-context-string)
+ (rear-context-string . "1月 6日 .symlinks\n")
+ (position . 611))
+("init-email.el"
+ (filename . "~/.emacs.d/lisp/init-email.el")
+ (front-context-string)
+ (rear-context-string . "ide 'init-email)")
+ (position . 204))
+("chinapaper.sty"
+ (filename . "~/texmf/tex/latex/chinapaper/chinapaper.sty")
+ (front-context-string . "  filecolor=blac")
+ (rear-context-string . "inkcolor=black,\n")
+ (position . 285))
+("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . ";;; 设置结构化配置文件\n\n(")
+ (rear-context-string)
+ (position . 1))
+("init-packages.el"
+ (filename . "~/.emacs.d/lisp/init-packages.el")
+ (front-context-string . ";;  __        __")
+ (rear-context-string)
+ (position . 1))
+("init-latex.el"
+ (filename . "~/.emacs.d/lisp/init-latex.el")
+ (front-context-string . ";; 配置latex环境\n;; ")
+ (rear-context-string)
+ (position . 1))
+("init-keys.el"
+ (filename . "~/.emacs.d/lisp/init-keys.el")
+ (front-context-string . ";;; 本文设置所有全局快捷键\n")
+ (rear-context-string)
+ (position . 1))
+("init-display.el"
+ (filename . "~/.emacs.d/lisp/init-display.el")
+ (front-context-string . ";;; 设置显示选项\n\n;; 显")
+ (rear-context-string)
+ (position . 1))
+("init-complete.el"
+ (filename . "~/.emacs.d/lisp/init-complete.el")
+ (front-context-string . ";;; 配置所有自动补全的插件\n")
+ (rear-context-string)
+ (position . 1))
+("init-python.el"
+ (filename . "~/.emacs.d/lisp/init-python.el")
+ (front-context-string . ";; 配置pyvenv\n(use")
+ (rear-context-string)
+ (position . 1))
+("temp"
+ (filename . "~/temp/")
+ (front-context-string . "尹修渠简历.docx\n  -rw")
+ (rear-context-string . "94  1月 28  2022 ")
+ (position . 209))
+)

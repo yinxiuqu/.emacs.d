@@ -1,0 +1,139 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Jan 18 22:37:34 2023
+;; Desktop file format version 208
+;; Emacs version 27.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (25544 1070 338085 397000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (height . 30) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update . t) (frameset--id . "AFCD-C00A-B1DB-4ACB") (frameset--mini t . t) (width . 166) (modeline . t) (unsplittable) (left . 0) (top . 0) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 92) (min-pixel-width . 80) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 48) (min-pixel-height-safe . 23) (min-pixel-width-safe . 16)) leaf (pixel-width . 1366) (pixel-height . 668) (total-width . 171) (total-height . 29) (normal-height . 1.0) (normal-width . 1.0) (buffer "init-python.el" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 552) (start . 201)) (prev-buffers ("p101.ipynb" 1 302) ("init-python.el" 201 552))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/yinxiuqu/.emacs.d/lisp" "~/temp/python/" "~/temp/python/tcp/exercise_client.py" "~/temp/python/tcp/exercise_server.py" "~/temp/python/tcp/tcp_client2.py" "~/temp/python/tcp/tcp_server2.py" "~/temp/python/tcp/tcp_server1.py" "~/temp/python/tcp/tcp_client1.py" "~/temp/python/tcp/"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/yinxiuqu/.emacs.d/lisp/init-python.el"
+  "init-python.el"
+  'emacs-lisp-mode
+  '(eldoc-mode company-mode yas-minor-mode auto-complete-mode TeX-PDF-mode override-global-mode global-auto-revert-mode hs-minor-mode)
+  552
+  '(527 nil)
+  nil
+  nil
+  '((buffer-display-time 25544 1058 158850 368000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (525))))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/temp/python/p101.ipynb"
+  "p101.ipynb"
+  'ein:ipynb-mode
+  '(company-mode yas-minor-mode TeX-PDF-mode override-global-mode global-auto-revert-mode hs-minor-mode)
+  302
+  '(302 nil)
+  nil
+  nil
+  '((buffer-display-time 25544 225 402855 566000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "python"
+  'dired-mode
+  '(company-mode yas-minor-mode TeX-PDF-mode override-global-mode global-auto-revert-mode)
+  1571
+  '(584 nil)
+  t
+  '("/home/yinxiuqu/temp/python/")
+  '((buffer-display-time 25544 54 936554 609000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/temp/python/tcp/tcp_client2.py"
+  "tcp_client2.py"
+  'python-mode
+  '(eldoc-mode company-mode yas-minor-mode auto-complete-mode TeX-PDF-mode override-global-mode global-auto-revert-mode hs-minor-mode)
+  303
+  '(70 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25544 32 77821 327000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (70 70 145 10 303))))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/temp/python/tcp/tcp_server2.py"
+  "tcp_server2.py"
+  'python-mode
+  '(eldoc-mode company-mode yas-minor-mode auto-complete-mode TeX-PDF-mode override-global-mode global-auto-revert-mode hs-minor-mode)
+  379
+  '(575 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25543 64196 534786 641000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (394 255 219 330 239 206 1 1 239 219 5 506 575))))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/temp/python/tcp/exercise_server.py"
+  "exercise_server.py"
+  'python-mode
+  '(eldoc-mode company-mode yas-minor-mode auto-complete-mode TeX-PDF-mode override-global-mode global-auto-revert-mode hs-minor-mode)
+  369
+  '(54 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25543 63736 968427 57000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (54 96 96 407 407 377 369))))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/temp/python/tcp/exercise_client.py"
+  "exercise_client.py"
+  'python-mode
+  '(eldoc-mode company-mode yas-minor-mode auto-complete-mode TeX-PDF-mode override-global-mode global-auto-revert-mode hs-minor-mode)
+  236
+  '(160 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25543 63390 564632 308000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (236))))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/temp/python/tcp/tcp_client1.py"
+  "tcp_client1.py"
+  'python-mode
+  '(eldoc-mode company-mode yas-minor-mode auto-complete-mode TeX-PDF-mode override-global-mode global-auto-revert-mode hs-minor-mode)
+  109
+  '(61 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25543 60217 342734 176000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (111 1 57 109 171 171 199))))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/temp/python/tcp/tcp_server1.py"
+  "tcp_server1.py"
+  'python-mode
+  '(eldoc-mode company-mode yas-minor-mode auto-complete-mode TeX-PDF-mode override-global-mode global-auto-revert-mode hs-minor-mode)
+  418
+  '(293 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25543 59403 862697 460000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (197 1 7 197))))
+
+(desktop-create-buffer 208
+  nil
+  "tcp"
+  'dired-mode
+  '(company-mode yas-minor-mode TeX-PDF-mode override-global-mode global-auto-revert-mode)
+  202
+  '(nil nil)
+  t
+  '("/home/yinxiuqu/temp/python/tcp/")
+  '((buffer-display-time 25543 56441 21895 354000))
+  '((mark-ring nil)))
+

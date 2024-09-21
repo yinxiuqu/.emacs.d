@@ -1,0 +1,34 @@
+;;;; 配置latex环境
+;;; 设置auctex，用于编译tex源码
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+
+;;; 设置xelatex为默认编辑命令，evince为pdf文件阅读器
+(setq TeX-output-view-style (quote (("^pdf$" "." "evince %o %(outpage)"))))
+(add-hook 'LaTeX-mode-hook
+	  (lambda()
+	    (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
+	    (setq TeX-command-default "XeLaTeX")
+	    (linum-mode);; LaTex模式下显示行数
+	    (auto-complete-mode);; LaTex模式下打开自动补全
+	    (turn-off-auto-fill)));; LaTex模式下不打开自动折行
+
+;; 配置拼写检查
+;(add-hook 'LaTeX-mode-hook 'ispell);start ispell
+(add-hook 'LaTeX-mode-hook 'flyspell-mode);start flyspell-mode
+(setq ispell-dictionary "british");set the default dictionary
+(add-hook 'LaTeX-mode-hook 'visual-line-mode)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(setq reftex-plug-into-AUCTeX t)
+
+;; 设置auto-complete-auctex
+(require 'auto-complete-auctex)
+
+;; 打开preview-late模式
+(load "preview-latex.el" nil t t)
+;;;; 文件末尾
+(provide 'init-latex)

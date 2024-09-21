@@ -1,0 +1,101 @@
+;;; 设置结构化配置文件
+
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
+;; Package Management
+;; -----------------------------------------------------------------
+(require 'init-packages)
+
+;; Python init
+;; -----------------------------------------------------------------
+(require 'init-python)
+
+;; haskell init
+;; -----------------------------------------------------------------
+(require 'init-haskell)
+
+;; latex init
+;; -----------------------------------------------------------------
+(require 'init-latex)
+
+;; company-mode init
+;; -----------------------------------------------------------------
+(require 'init-complete)
+
+;; lsp init
+;; -----------------------------------------------------------------
+(require 'init-lsp)
+
+;; projectile init
+;; -----------------------------------------------------------------
+;; (require 'init-projectile)
+
+;; 全局快捷键配置
+;; -----------------------------------------------------------------
+(require 'init-keys)
+
+;; display init
+;; -----------------------------------------------------------------
+(require 'init-display)
+
+;; email init
+;; -----------------------------------------------------------------
+(require 'init-email)
+
+
+
+;;; 设置暂未分配到结构化配置文件的杂项
+
+;; 设置默认主模式
+(setq default-major-mode 'text-mode)
+;; 启用自动换行
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; 启用临时标记功能，高亮显示功能
+(setq-default transient-mark-mode t)
+
+;; 设置和系统互相粘贴
+(setq x-select-enable-clipboard t)
+
+;; 当另一程序修改了文件时，让 Emacs 及时刷新 Buffer
+(global-auto-revert-mode t)
+
+; 选中文本后输入文本会替换文本（更符合我们习惯了的其它编辑器的逻辑）
+(delete-selection-mode t)
+
+;; 禁用\e\e和\C-x\C-u
+ (global-unset-key "\e\e")
+ (global-unset-key "\C-x\C-u")
+
+
+;; 打开csv文件自动使用csv-mode
+(add-hook 'csv-mode-hook
+	  (lambda ()
+	    (csv-align-fields nil (point-min) (point-max))))
+
+;;
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(conda-anaconda-home "~/anaconda3/")
+ '(ein:output-area-inlined-images t)
+ '(mailcap-user-mime-data nil)
+ '(package-selected-packages
+   '(pylint yasnippet-snippets python-mode auto-complete-auctex yasnippet s
+	    websocket request-deferred request skewer-mode pyvenv
+	    company-anaconda use-package haskell-mode elpygen ein)))
+
+;;
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(put 'downcase-region 'disabled nil)
+(put 'scroll-left 'disabled nil)
+
+;;让 Emacs 可以直接打开和显示图片。
+(setq auto-image-file-mode t)
+(put 'upcase-region 'disabled nil)
