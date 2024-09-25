@@ -6,7 +6,7 @@
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
 
-;;; 设置xelatex为默认编辑命令，evince为pdf文件阅读器
+;;; 设置xelatex为默认编译命令，evince为pdf文件阅读器
 (setq TeX-output-view-style (quote (("^pdf$" "." "evince %o %(outpage)"))))
 (add-hook 'LaTeX-mode-hook
 	  (lambda()
