@@ -2,42 +2,18 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Thu Nov  3 17:56:23 2022
+;; Created Sat Sep 21 17:55:58 2024
 ;; Desktop file format version 208
-;; Emacs version 27.1
+;; Emacs version 28.2
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (25443 36935 503601 760000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (height . 30) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update . t) (frameset--id . "88A4-FD46-4C1A-7622") (frameset--mini t . t) (width . 166) (modeline . t) (unsplittable) (left . 0) (top . 0) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 9) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 92) (min-pixel-width . 80) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 72) (min-pixel-height-safe . 23) (min-pixel-width-safe . 16)) leaf (pixel-width . 1366) (pixel-height . 668) (total-width . 170) (total-height . 29) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins 3) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 3045) (start . 2529)) (prev-buffers (".emacs.d" 1 878) ("*scratch*" 1 146))))])
+(setq desktop-saved-frameset [frameset 1 (26350 38958 163344 618000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update . t) (frameset--id . "AEF5-65A8-82AD-92C8") (frameset--mini t . t) (height . 30) (width . 80) (modeline . t) (unsplittable) (left . 40) (top + -8) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 92) (min-pixel-width . 80) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 48) (min-pixel-height-safe . 23) (min-pixel-width-safe . 16)) leaf (pixel-width . 672) (pixel-height . 667) (total-width . 84) (total-height . 29) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 146) (start . 1))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("/home/yinxiuqu/.emacs.d" "~/.emacs.d/"))
+(setq file-name-history '("~/.emacs.d/"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
-(desktop-create-buffer 208
-  "/home/yinxiuqu/.emacs.d/init.el"
-  "init.el"
-  'emacs-lisp-mode
-  '(eldoc-mode company-mode linum-mode)
-  3045
-  '(2769 nil)
-  nil
-  nil
-  '((buffer-display-time 25443 36852 693939 930000) (buffer-file-coding-system . utf-8-unix))
-  '((mark-ring (3045 3045))))
-
-(desktop-create-buffer 208
-  nil
-  ".emacs.d"
-  'dired-mode
-  '(company-mode linum-mode)
-  878
-  '(nil nil)
-  t
-  '("/home/yinxiuqu/.emacs.d/")
-  '((buffer-display-time 25443 36841 453147 539000))
-  '((mark-ring nil)))
-
