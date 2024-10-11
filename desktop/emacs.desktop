@@ -2,18 +2,30 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Oct 11 22:33:01 2024
+;; Created Fri Oct 11 22:44:54 2024
 ;; Desktop file format version 208
 ;; Emacs version 28.2
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (26377 14109 452472 334000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update . t) (frameset--id . "639B-8D29-C9CD-2E48") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 30) (width . 166) (left . 0) (top . 0)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 92) (min-pixel-width . 80) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 48) (min-pixel-height-safe . 23) (min-pixel-width-safe . 16)) leaf (pixel-width . 1366) (pixel-height . 668) (total-width . 171) (total-height . 29) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 146) (start . 1)) (prev-buffers ("*scratch*" 1 1))))])
+(setq desktop-saved-frameset [frameset 1 (26377 14822 486380 119000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update . t) (frameset--id . "6BC6-D4DA-8858-8DF6") (frameset--mini t . t) (height . 30) (width . 80) (modeline . t) (unsplittable) (left . 210) (top . 114) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 92) (min-pixel-width . 80) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 48) (min-pixel-height-safe . 23) (min-pixel-width-safe . 16)) leaf (pixel-width . 672) (pixel-height . 667) (total-width . 84) (total-height . 29) (normal-height . 1.0) (normal-width . 1.0) (buffer "github.token" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 41) (start . 1)) (prev-buffers ("*scratch*" 1 146))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("~/.emacs.d/lisp/init-lsp.el"))
+(setq file-name-history '("~/Nutstore Files/老资料/tokens/github.token"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/yinxiuqu/Nutstore Files/老资料/tokens/github.token"
+  "github.token"
+  'fundamental-mode
+  '(TeX-PDF-mode yas-minor-mode company-mode global-whitespace-mode global-auto-revert-mode)
+  41
+  '(1 nil)
+  nil
+  nil
+  '((buffer-display-time 26377 14810 241266 403000))
+  '((mark-ring nil)))
+
