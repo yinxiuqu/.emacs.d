@@ -11,7 +11,7 @@
   :config
     (setq lsp-completion-provider :none) ;; 阻止 lsp 重新设置 company-backend 而覆盖我们 yasnippet 的设置
     (setq lsp-headerline-breadcrumb-enable t)
-    (setq lsp-completion-default-behaviour 'insert))
+    (setq lsp-completion-default-behaviour :insert))
 
 ;; 安装一个 lsp-ui 插件
 (use-package lsp-ui
