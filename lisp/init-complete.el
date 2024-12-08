@@ -19,13 +19,13 @@
 
 
 ;; 设置auto-complete
-(ac-config-default)
-(setq ac-auto-show-menu 0.05)
-(setq auto-complete-mode t)
+;(ac-config-default)
+;(setq ac-auto-show-menu 0.05)
+;(setq auto-complete-mode t)
 
- (setq ac-quick-help-prefer-pos-tip t)
- (setq ac-use-quick-help t)
- (setq ac-quick-help-delay 0.5)
+; (setq ac-quick-help-prefer-pos-tip t)
+; (setq ac-use-quick-help t)
+; (setq ac-quick-help-delay 0.5)
 
 ;; 自动补全括号
 (electric-pair-mode t)

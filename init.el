@@ -82,9 +82,8 @@
  '(ein:output-area-inlined-images t)
  '(mailcap-user-mime-data nil)
  '(package-selected-packages
-   '(pylint yasnippet-snippets python-mode auto-complete-auctex yasnippet s
-	    websocket request-deferred request skewer-mode pyvenv
-	    company-anaconda use-package haskell-mode elpygen ein)))
+   '(auctex pylint yasnippet-snippets python-mode yasnippet s websocket request-deferred request skewer-mode pyvenv use-package haskell-mode elpygen ein))
+ '(safe-local-variable-values '((TeX-master . "../main") (TeX-master . t))))
 
 ;;
 (custom-set-faces

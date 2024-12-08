@@ -2,30 +2,54 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sat Oct 12 08:38:08 2024
+;; Created Sun Dec  8 12:27:03 2024
 ;; Desktop file format version 208
 ;; Emacs version 28.2
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (26377 50416 871554 713000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update . t) (frameset--id . "1C63-E79D-0D4A-7C9C") (frameset--mini t . t) (height . 30) (width . 80) (modeline . t) (unsplittable) (left . 40) (top + -8) (icon-name) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 92) (min-pixel-width . 80) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 48) (min-pixel-height-safe . 23) (min-pixel-width-safe . 16)) leaf (pixel-width . 672) (pixel-height . 667) (total-width . 84) (total-height . 29) (normal-height . 1.0) (normal-width . 1.0) (buffer "github.token" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1)) (prev-buffers ("*scratch*" 1 146))))])
+(setq desktop-saved-frameset [frameset 1 (26453 8215 673568 473000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "white") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update) (modeline . t) (unsplittable) (frameset--id . "51F5-5E2E-15EC-DBA2") (frameset--mini t . t) (display . ":0") (height . 25) (width . 80) (left . 40) (top + -8) (icon-name) (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 7) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 92) (min-pixel-width . 80) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 56) (min-pixel-height-safe . 23) (min-pixel-width-safe . 16)) leaf (pixel-width . 672) (pixel-height . 552) (total-width . 84) (total-height . 24) (normal-height . 1.0) (normal-width . 1.0) (buffer "section6.tex" (selected . t) (hscroll . 0) (fringes 0 0 nil nil) (margins 3) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 7752) (start . 7466))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring nil)
+(setq search-ring '(#("eqn:Rfg5" 0 8 (isearch-case-fold-search nil isearch-regexp-function nil))))
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("~/Nutstore Files/老资料/tokens/github.token"))
+(setq file-name-history '("/home/yinxiuqu/下载/Sat Dec 07 2024 23_25_54 GMT+0800 (China Standard Time)_backup.bin" "~/文档/电子书/LaTeX/示例源文件/第_9_章__插图/例_9.35/9-35.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/preamble.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/section4.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/section4" "~/Nutstore Files/office/maths_note/高等代数/sections/preamble.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/section5.tex" "/home/yinxiuqu/桌面/wechat.desktop" "~/Nutstore Files/office/maths_note/高等代数/sections/preamble.tex" "~/下载/CH341SER_LINUX/README.md" "~/Nutstore Files/老资料/tokens/github.token" "~/Nutstore Files/office/maths_note/高等代数/sections/section6.tex" "/home/yinxiuqu/.emacs.d/desktop" "~/Nutstore Files/office/maths_note/高等代数/sections/section6.tex"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 208
-  "/home/yinxiuqu/Nutstore Files/老资料/tokens/github.token"
-  "github.token"
+  "/home/yinxiuqu/Nutstore Files/office/maths_note/高等代数/sections/section6.tex"
+  "section6.tex"
+  'LaTeX-mode
+  '(visual-line-mode company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode reftex-mode flyspell-mode linum-mode)
+  7752
+  '(7671 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 26453 8204 163404 938000) (buffer-file-coding-system . utf-8-unix) (truncate-lines) (TeX-master . "../main"))
+  '((mark-ring (7604 7521 7469 7390 6003 7327 7372 7256 7234 7218 7158 7127 7102 7087 7031 7752))))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/Nutstore Files/office/maths_note/高等代数/main.log"
+  "main.log"
   'fundamental-mode
-  '(TeX-PDF-mode yas-minor-mode company-mode global-whitespace-mode global-auto-revert-mode)
+  '(company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode)
+  54064
+  '(nil nil)
+  t
+  nil
+  '((buffer-display-time 26452 32004 384136 163000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/Nutstore Files/office/maths_note/高等代数/main.tex"
+  "main.tex"
+  'LaTeX-mode
+  '(visual-line-mode company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode reftex-mode flyspell-mode linum-mode)
   1
-  '(41 nil)
+  '(nil nil)
   nil
   nil
-  '((buffer-display-time 26377 50408 699578 533000))
+  '((indent-tabs-mode) (buffer-display-time 26452 30007 23891 89000) (buffer-file-coding-system . utf-8-unix) (truncate-lines) (TeX-master . t))
   '((mark-ring nil)))
 
