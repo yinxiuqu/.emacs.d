@@ -37,7 +37,8 @@
 		  desktop-auto-save-timeout   10)
 	    (desktop-save-mode 1)
 	    (if (< (length command-line-args) 2)
-		(desktop-read))))
+		(desktop-read)))
+	  'if-desktop-read)
 
 ;; 突出显示每行超过80个字符的部分
 (require 'whitespace)

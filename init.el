@@ -98,3 +98,4 @@
 ;;让 Emacs 可以直接打开和显示图片。
 (setq auto-image-file-mode t)
 (put 'upcase-region 'disabled nil)
+
