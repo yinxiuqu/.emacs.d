@@ -2,78 +2,114 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Dec 25 10:39:19 2024
+;; Created Tue Mar 11 09:06:33 2025
 ;; Desktop file format version 208
 ;; Emacs version 28.2
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (26475 28759 337372 106000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 1) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update . t) (frameset--id . "B80B-FF52-0007-3EB1") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (user-size . t) (height . 28) (width . 166) (left . 0) (top . 0)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 14) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 92) (min-pixel-width . 160) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 112) (min-pixel-height-safe . 23) (min-pixel-width-safe . 32)) hc (pixel-width . 1366) (pixel-height . 627) (total-width . 171) (total-height . 27) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 686) (pixel-height . 627) (total-width . 86) (total-height . 27) (normal-height . 1.0) (normal-width . 0.5) (buffer "mydoc.tex" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins 2) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 319) (start . 154)) (prev-buffers ("mydoc.tex" 154 658) ("笔记资料包下载后用7z或360解压软件去解压.txt" 1 1) ("section7.tex" 35710 35821))) (leaf (last . t) (pixel-width . 680) (pixel-height . 627) (total-width . 85) (total-height . 27) (normal-height . 1.0) (normal-width . 0.5) (buffer "*~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.33/mydoc output*" (selected) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (26575 35993 648932 558000) (desktop . "208") "yinxiuqu@debian" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-GOOG-Noto Sans Mono CJK SC-normal-normal-normal-*-15-*-*-*-*-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "black") (background-color . "white") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "black") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . fullheight) (visibility . icon) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (last-focus-update) (frameset--id . "FAAB-FB2D-128B-A7E7") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (user-size . t) (height . 30) (width . 81)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 10) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 92) (min-pixel-width . 80) (min-pixel-height-ignore . 46) (min-pixel-width-ignore . 80) (min-pixel-height-safe . 23) (min-pixel-width-safe . 16)) leaf (pixel-width . 683) (pixel-height . 668) (total-width . 85) (total-height . 29) (normal-height . 1.0) (normal-width . 1.0) (buffer "section9.tex" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins 4) (scroll-bars nil 2 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 76614) (start . 76218)) (prev-buffers ("section9.tex" 76218 76608) ("*Messages*" 2647 2736))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '(#("example" 0 7 (isearch-case-fold-search t isearch-regexp-function nil)) #("question" 0 8 (isearch-case-fold-search t isearch-regexp-function nil)) #("theory" 0 6 (isearch-case-fold-search t isearch-regexp-function nil))))
+(setq search-ring '(#("xLong" 0 5 (isearch-case-fold-search nil isearch-regexp-function nil)) #("式" 0 1 (isearch-case-fold-search t isearch-regexp-function nil)) #("org" 0 3 (isearch-regexp-function nil isearch-case-fold-search t))))
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.33/mydoc.tex" "~/文档/计算机技术/预习资料/笔记资料包下载后用7z或360解压软件去解压.txt" "~/Nutstore Files/office/maths_note/高等代数/sections/preamble.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/section6.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/preamble.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/usepackages.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.32/mybook.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.32/mybook.ist" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.32/mybook.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.31/mybook.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/preamble.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/section6.tex" "~/Nutstore Files/office/maths_note/高等代数/sections/preamble.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.24/10-24.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.23/10-23.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.22/10-22.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.21/10-21.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.20/10-20.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.19/10-19.tex" "~/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.18/10-18.tex" "/home/yinxiuqu/.emacs.d/desktop" "~/Nutstore Files/office/maths_note/高等代数/sections/section7.tex"))
+(setq file-name-history '("~/.emacs.d/elpa/smartparens-20241220.1254/" "~/.emacs.d/elpa/org-9.7.25/" "~/.emacs.d/elpa/" "~/Nutstore Files/" "~/.emacs.d/lisp/init-complete.el"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 208
-  "/home/yinxiuqu/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.33/mydoc.tex"
-  "mydoc.tex"
+  "/home/yinxiuqu/Nutstore Files/office/maths/高等代数/sections/section9.tex"
+  "section9.tex"
   'LaTeX-mode
-  '(visual-line-mode company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode reftex-mode flyspell-mode linum-mode)
-  319
-  '(658 nil)
+  '(visual-line-mode company-mode yas-minor-mode smartparens-mode global-whitespace-mode copilot-mode global-auto-revert-mode TeX-PDF-mode reftex-mode flyspell-mode linum-mode)
+  76614
+  '(76464 nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-display-time 26475 28717 308174 815000) (buffer-file-coding-system . utf-8-dos) (truncate-lines) (TeX-master . t))
-  '((mark-ring (284 268 641 678 641 658 319))))
+  '((tab-width . 2) (indent-tabs-mode) (buffer-display-time 26575 35982 521244 441000) (buffer-file-coding-system . utf-8-unix) (truncate-lines) (TeX-master . "../main"))
+  '((mark-ring (76370 75707 75667 75599 75556 75266 74925 74682 72445 72406 73107 72556 69568 67650 74091 74009))))
 
 (desktop-create-buffer 208
-  "/home/yinxiuqu/文档/计算机技术/预习资料/笔记资料包下载后用7z或360解压软件去解压.txt"
-  "笔记资料包下载后用7z或360解压软件去解压.txt"
-  'text-mode
-  '(auto-fill-mode company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode)
-  1
-  '(nil nil)
   nil
-  nil
-  '((buffer-display-time 26475 26693 427684 651000) (buffer-file-coding-system . utf-8-dos))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/yinxiuqu/Nutstore Files/office/maths_note/高等代数/sections/section7.tex"
-  "section7.tex"
-  'LaTeX-mode
-  '(visual-line-mode company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode reftex-mode flyspell-mode linum-mode)
-  35821
-  '(35773 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-display-time 26475 26681 225048 968000) (buffer-file-coding-system . utf-8-unix) (truncate-lines) (TeX-master . "../main"))
-  '((mark-ring (35574 35773 34827 34703 34519 34804 35761 34350 34039 34281 34123 34165 33840 33528 33113 27548))))
-
-(desktop-create-buffer 208
-  "/home/yinxiuqu/Nutstore Files/office/maths_note/高等代数/main.tex"
-  "main.tex"
-  'LaTeX-mode
-  '(visual-line-mode company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode reftex-mode flyspell-mode linum-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-display-time 26475 26680 199705 46000) (buffer-file-coding-system . utf-8-unix) (truncate-lines) (TeX-master . t))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/yinxiuqu/文档/电子书/LaTeX/示例源文件/第_10_章_正文工具/例_10.33/mydoc.log"
-  "mydoc.log"
-  'fundamental-mode
+  "sections"
+  'dired-mode
   '(company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode)
-  17372
+  1712
+  '(288 nil)
+  t
+  '("/home/yinxiuqu/Nutstore Files/office/maths/高等代数/sections/")
+  '((buffer-display-time 26574 62135 209461 939000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "高等代数"
+  'dired-mode
+  '(company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode)
+  790
   '(nil nil)
   t
+  '("/home/yinxiuqu/Nutstore Files/office/maths/高等代数/")
+  '((buffer-display-time 26574 62134 27175 506000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
   nil
-  '((buffer-display-time) (buffer-file-coding-system . undecided-unix))
+  "maths"
+  'dired-mode
+  '(company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode)
+  212
+  '(nil nil)
+  t
+  '("/home/yinxiuqu/Nutstore Files/office/maths/")
+  '((buffer-display-time 26574 62132 382047 102000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "office"
+  'dired-mode
+  '(company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode)
+  417
+  '(nil nil)
+  t
+  '("/home/yinxiuqu/Nutstore Files/office/")
+  '((buffer-display-time 26574 62130 4913 192000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "Nutstore Files"
+  'dired-mode
+  '(company-mode yas-minor-mode global-whitespace-mode global-auto-revert-mode TeX-PDF-mode)
+  487
+  '(nil nil)
+  t
+  '("/home/yinxiuqu/Nutstore Files/")
+  '((buffer-display-time 26574 62121 59280 308000))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/.emacs.d/elpa/org-9.7.25/org-loaddefs.el"
+  "org-loaddefs.el"
+  'emacs-lisp-mode
+  '(eldoc-mode company-mode yas-minor-mode smartparens-mode global-whitespace-mode copilot-mode global-auto-revert-mode TeX-PDF-mode hs-minor-mode)
+  149032
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 26575 35981 135731 26000) (buffer-file-coding-system . utf-8-unix) (fill-column . 70))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/yinxiuqu/Nutstore Files/office/maths/高等代数/main.tex"
+  "main.tex"
+  'LaTeX-mode
+  '(visual-line-mode company-mode yas-minor-mode smartparens-mode global-whitespace-mode copilot-mode global-auto-revert-mode TeX-PDF-mode reftex-mode flyspell-mode linum-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 2) (indent-tabs-mode) (buffer-display-time 26574 62542 98261 92000) (buffer-file-coding-system . utf-8-unix) (truncate-lines) (TeX-master . t))
   '((mark-ring nil)))
 

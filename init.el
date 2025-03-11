@@ -42,6 +42,9 @@
 ;; -----------------------------------------------------------------
 (require 'init-email)
 
+;; AI init
+;; -----------------------------------------------------------------
+(require 'init-ai)
 
 
 ;;; 设置暂未分配到结构化配置文件的杂项
@@ -82,7 +85,7 @@
  '(ein:output-area-inlined-images t)
  '(mailcap-user-mime-data nil)
  '(package-selected-packages
-   '(auctex pylint yasnippet-snippets python-mode yasnippet s websocket request-deferred request skewer-mode pyvenv use-package haskell-mode elpygen ein))
+   '(smartparens org lsp-mode deferred auctex pylint python-mode yasnippet s websocket request-deferred request skewer-mode pyvenv use-package haskell-mode elpygen ein))
  '(safe-local-variable-values '((TeX-master . "../main") (TeX-master . t))))
 
 ;;
