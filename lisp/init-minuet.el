@@ -15,6 +15,9 @@
                                (or (getenv "PATH") "")))
     (exec-path-from-shell-initialize)))
 
+;; exec-path-from-shell 会整体替换 exec-path，这里补回 anaconda（供 ruff/pyright/python 使用）
+(add-to-list 'exec-path "/home/yinxiuqu/anaconda3/bin")
+
 ;; 配置 minuet
 (use-package minuet
   :ensure t
