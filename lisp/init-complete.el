@@ -21,7 +21,7 @@
 (require 'yasnippet)
 (yas-reload-all)
 (yas-global-mode t)
-(setq yas-snippet-dirs '("~/emacs.d/snippets"))
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 
 ;; 自动补全括号
 (electric-pair-mode t)
