@@ -1,3 +1,9 @@
+;; 安装 which-key：为 lsp 等提供按键提示，lsp 的 :hook 集成依赖它
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode 1))            ; 启用全局按键提示
+
 ;; 配置lsp-mode
 (use-package lsp-mode
   :ensure t

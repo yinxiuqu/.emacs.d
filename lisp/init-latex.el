@@ -11,13 +11,20 @@
 	  (lambda()
 	    (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
 	    (setq TeX-command-default "XeLaTeX")
-        (setq TeX-source-correlate-mode t) ; ; 启用同步跳转
-        (setq TeX-source-correlate-start-server t) ; 启动服务器支持PDF反向搜索
-	    (linum-mode);; LaTex模式下显示行数
+;        (setq TeX-source-correlate-mode t) ; ; 启用同步跳转
+;        (setq TeX-source-correlate-start-server t) ; 启动服务器支持PDF反向搜索
+;        (setq TeX-view-program-selection '((output-pdf "Evince")))
+;        (setq TeX-view-program-list '(("Evince" "evince %o")))
+;        (local-set-key (kbd "C-c v") 'TeX-view-forward-search);; 绑定正向搜索快捷键
+	    (display-line-numbers-mode 1);; LaTex模式下显示行数（Emacs 30 已移除 linum-mode）
         (turn-off-auto-fill);; LaTex模式下不打开自动折行
         (local-set-key (kbd "M-SPC") 'TeX-complete-symbol);; 将补全功能绑定到tab
 ;        (setq-local TeX-electric-math (cons "$" "$"));; LaTex模式下自动补全第二个$
-	))
+	    ))
+
+;(with-eval-after-load 'tex
+;  (define-key TeX-source-correlate-map [C-down-mouse-1]
+;              #'TeX-view-mouse))
 
 ;; 配置拼写检查
 (setq ispell-dictionary "british");set the default dictionary

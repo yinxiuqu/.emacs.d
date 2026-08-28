@@ -17,10 +17,12 @@
 (add-hook 'python-mode-hook 'pylint-add-key-bindings)
 
 ;; 配置发送buffer中的python文件到python解释器
-(defun python-shell-send-this-file()
+(defun python-shell-send-this-file ()
   "send the file in buffer to python shell"
   (interactive)
-  (python-shell-send-file (buffer-file-name))
+  (py-shell-send-file (buffer-file-name)))
+
+(with-eval-after-load 'python-mode
   (define-key python-mode-map (kbd "C-c C-f") 'python-shell-send-this-file))
 
 ;; 去除启动时的Can't guess python-indent-offset, using defaults: 4错误

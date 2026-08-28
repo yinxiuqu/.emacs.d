@@ -26,14 +26,6 @@
 ;; -----------------------------------------------------------------
 (require 'init-lsp)
 
-;; projectile init
-;; -----------------------------------------------------------------
-;; (require 'init-projectile)
-
-;; 全局快捷键配置
-;; -----------------------------------------------------------------
-(require 'init-keys)
-
 ;; display init
 ;; -----------------------------------------------------------------
 (require 'init-display)
@@ -44,8 +36,15 @@
 
 ;; AI init
 ;; -----------------------------------------------------------------
-(require 'init-ai)
+(require 'init-copilot)
 
+;; minuet init
+;; -----------------------------------------------------------------
+(require 'init-minuet)
+
+;; 定义其他函数
+;; -----------------------------------------------------------------
+(require 'other-functions)
 
 ;;; 设置暂未分配到结构化配置文件的杂项
 
@@ -53,11 +52,6 @@
 (setq default-major-mode 'text-mode)
 ;; 启用自动换行
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
-;; 启用临时标记功能，高亮显示功能
-(setq-default transient-mark-mode t)
-
-;; 设置和系统互相粘贴
-(setq x-select-enable-clipboard t)
 
 ;; 当另一程序修改了文件时，让 Emacs 及时刷新 Buffer
 (global-auto-revert-mode t)
@@ -70,10 +64,10 @@
  (global-unset-key "\C-x\C-u")
 
 
-;; 打开csv文件自动使用csv-mode
-(add-hook 'csv-mode-hook
-	  (lambda ()
-	    (csv-align-fields nil (point-min) (point-max))))
+;; 打开csv文件自动使用csv-mode（注意：csv-mode 未安装，此设置当前无效）
+;; (add-hook 'csv-mode-hook
+;; 	  (lambda ()
+;; 	    (csv-align-fields nil (point-min) (point-max))))
 
 ;;
 (custom-set-variables
@@ -81,11 +75,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(conda-anaconda-home "~/anaconda3/")
- '(ein:output-area-inlined-images t)
- '(mailcap-user-mime-data nil)
- '(package-selected-packages
-   '(smartparens org lsp-mode deferred auctex pylint python-mode yasnippet s websocket request-deferred request skewer-mode pyvenv use-package haskell-mode elpygen ein))
  '(safe-local-variable-values '((TeX-master . "../main") (TeX-master . t))))
 
 ;;
@@ -99,6 +88,6 @@
 (put 'scroll-left 'disabled nil)
 
 ;;让 Emacs 可以直接打开和显示图片。
-(setq auto-image-file-mode t)
+(auto-image-file-mode 1)
 (put 'upcase-region 'disabled nil)
 
