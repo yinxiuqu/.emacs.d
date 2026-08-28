@@ -10,6 +10,7 @@
   (setq company-idle-delay 0.2) ;延迟0.2妙
   (setq company-show-numbers t) ;; 给选项编号 (按快捷键 M-1、M-2 等等来进行选择).
   (setq company-backends (delete 'company-ispell company-backends));; 禁用 company-ispell（拼写补全）
+  (add-to-list 'company-backends 'company-capf) ;; 接入 LSP 补全（pyright/其他语言服务器）
   (setq company-selection-wrap-around t);; 启用循环选择
   (setq company-transformers '(company-sort-by-occurrence)) ; 根据选择的频率进行排序，如果不喜欢可以去掉
 ;  (setq company-backends (cons 'company-yasnippet company-backends))

@@ -1,39 +1,34 @@
-;; 配置pyvenv
-(require 'pyvenv)
-(setenv "WORKON_HOME" "~/anaconda3/envs")
-(add-hook 'python-mode-hook 'pyvenv-mode)
+;; 现代 Python 配置：lsp-mode（客户端）+ lsp-pyright（适配器）
+;;                    + pyright（语言服务器）+ pyvenv（虚拟环境）
+;; 使用 Emacs 内置 python.el（Emacs 30 自带，取代老式 python-mode 包）
 
-;; 配置autopep8
-(require 'py-autopep8)
-(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+;; ---------- 虚拟环境管理（pyvenv） ----------
+(use-package pyvenv
+  :ensure t
+  :config
+  (setenv "WORKON_HOME" "~/anaconda3/envs")
+  (add-hook 'python-mode-hook 'pyvenv-mode))
 
-;; 配置flycheck
-(require 'flycheck)
-(add-hook 'python-mode-hook 'flycheck-mode)
+;; ---------- LSP：pyright 语言服务器 ----------
+;; 补全/诊断/跳转/重命名等由 pyright 提供，经 lsp-mode 接入 company 补全
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode . lsp-deferred)
+  :config
+  ;; pyright 装在 anaconda 里；GUI 启动时 PATH 不含 anaconda，用绝对路径确保找到
+  (setq lsp-pyright-executable "/home/yinxiuqu/anaconda3/bin/pyright"))
 
-;; 配置pylint
-(autoload 'pylint "pylint")
-(add-hook 'python-mode-hook 'pylint-add-menu-items)
-(add-hook 'python-mode-hook 'pylint-add-key-bindings)
-
-;; 配置发送buffer中的python文件到python解释器
+;; ---------- 发送 buffer 到 Python 解释器 ----------
 (defun python-shell-send-this-file ()
   "send the file in buffer to python shell"
   (interactive)
-  (py-shell-send-file (buffer-file-name)))
+  (python-shell-send-file (buffer-file-name)))
 
-(with-eval-after-load 'python-mode
+(with-eval-after-load 'python
   (define-key python-mode-map (kbd "C-c C-f") 'python-shell-send-this-file))
 
-;; 去除启动时的Can't guess python-indent-offset, using defaults: 4错误
+;; 去除启动时的 Can't guess python-indent-offset 提示
 (setq python-indent-guess-indent-offset-verbose nil)
-
-;;; 配置lsp-pyright
-;(use-package lsp-pyright
-;  :ensure t
-;  :hook (python-mode . (lambda ()
-;                          (require 'lsp-pyright)
-;                          (lsp))))
 
 ;; 文件末尾
 (provide 'init-python)

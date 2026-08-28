@@ -9,8 +9,8 @@
 ;; 设置python-shell-send-buffer命令快捷键C-j C-c
 (global-set-key (kbd "C-j C-c") 'python-shell-send-buffer)
 
-;; 设置py-execute-buffer命令快捷键C-j |
-(global-set-key (kbd "C-j |") 'py-execute-buffer)
+;; 设置python-shell-send-region命令快捷键C-j |（选中区域发送；整buffer用C-j C-c）
+(global-set-key (kbd "C-j |") 'python-shell-send-region)
 
 ;; 设置C-x p为返回上一个窗口，和C-x o相反
 ; 定义返回上n个窗口函数
