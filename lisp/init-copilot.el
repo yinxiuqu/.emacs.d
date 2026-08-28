@@ -10,6 +10,11 @@
 (add-hook 'python-mode-hook 'copilot-mode)
 (add-hook 'TeX-mode-hook 'copilot-mode)
 
+;; copilot 缩进推断：默认表只覆盖内置 latex-mode（小写），
+;; 补上 AUCTeX 的 LaTeX-mode/TeX-mode，消除 "no mode-specific indentation offset" 警告
+(add-to-list 'copilot-indentation-alist '(LaTeX-mode LaTeX-indent-level 2) t)
+(add-to-list 'copilot-indentation-alist '(TeX-mode LaTeX-indent-level 2) t)
+
 ;; Tab 键接受全部补全
 (define-key copilot-mode-map (kbd "<tab>") 'copilot-accept-completion)
   
