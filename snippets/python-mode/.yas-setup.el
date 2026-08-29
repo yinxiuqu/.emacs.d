@@ -35,4 +35,4 @@
                  "\n"))))
 
 
-(add-hook 'python-mode-hook #'yasnippet-snippets--fixed-indent)
+;; 旧版集合的 --fixed-indent 钩子已废弃（新版集合已移除该函数），删除以免报错

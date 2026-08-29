@@ -10,6 +10,10 @@
 ;; -----------------------------------------------------------------
 (require 'init-python)
 
+;; conda 环境管理（conda.el，M-x conda-env-activate 切换环境）
+;; -----------------------------------------------------------------
+(require 'init-conda)
+
 ;; haskell init
 ;; -----------------------------------------------------------------
 (require 'init-haskell)
@@ -79,7 +83,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(safe-local-variable-values '((TeX-master . "../main") (TeX-master . t))))
+ '(package-selected-packages
+   '(apheleia auctex company copilot exec-path-from-shell flycheck
+              haskell-mode jedi lsp-pyright lsp-ui minuet org
+              py-autopep8 pyvenv restart-emacs smartparens use-package
+              yasnippet yasnippet-snippets))
+ '(safe-local-variable-values
+   '((python-shell-interpreter-args . "-i")
+     (python-shell-interpreter
+      . "/home/yinxiuqu/anaconda3/envs/qa/bin/python")
+     (TeX-master . "../main") (TeX-master . t))))
 
 ;;
 (custom-set-faces
