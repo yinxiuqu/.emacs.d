@@ -1,5 +1,8 @@
 ;;; 设置结构化配置文件
 
+;; 禁用 GUI 文件选择对话框（改用 minibuffer 文本输入，避免退出/保存时弹系统文件选择器）
+(setq use-file-dialog nil)
+
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; Package Management

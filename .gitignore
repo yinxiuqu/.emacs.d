@@ -1,0 +1,13 @@
+# === 缓存 / 状态文件（不入库，本地生成） ===
+elpa/
+eln-cache/
+.cache/
+auto-save-list/
+desktop/
+eshell/
+tree-sitter/
+.lsp-session-v1
+tramp
+network-security.data
+url/
+games/

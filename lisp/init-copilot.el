@@ -15,6 +15,12 @@
 (add-to-list 'copilot-indentation-alist '(LaTeX-mode LaTeX-indent-level 2) t)
 (add-to-list 'copilot-indentation-alist '(TeX-mode LaTeX-indent-level 2) t)
 
+;; lisp 系模式缩进（消除 lisp 编程时的同名警告）
+(add-to-list 'copilot-indentation-alist '(emacs-lisp-mode lisp-indent-offset 4) t)
+(add-to-list 'copilot-indentation-alist '(lisp-mode lisp-indent-offset 4) t)
+(add-to-list 'copilot-indentation-alist '(lisp-interaction-mode lisp-indent-offset 4) t)
+;; 若使用 clojure-mode 可再加：(clojure-mode clojure-indent-offset 2)
+
 ;; Tab 键接受全部补全
 (define-key copilot-mode-map (kbd "<tab>") 'copilot-accept-completion)
   
