@@ -37,6 +37,9 @@
       desktop-load-locked-desktop nil
       desktop-auto-save-timeout   10)
 (desktop-save-mode 1)
+;; 先于 desktop-read 注册受信任目录，否则恢复会话时 dir-locals
+;; (quantming/.dir-locals.el) 会因 custom-set-variables 尚未执行而反复弹安全确认
+(setq safe-local-variable-directories '("/home/yinxiuqu/quantming/"))
 ;; 直接用 emacs 打开文件时不恢复上次会话；直接开 emacs 时恢复
 (if (< (length command-line-args) 2)
     (desktop-read))
@@ -47,11 +50,6 @@
           (lambda ()
             (unless desktop-dirname
               (setq desktop-dirname "~/.emacs.d/desktop/"))))
-
-;; 突出显示每行超过80个字符的部分
-(require 'whitespace)
-(setq whitespace-style '(face empty tabs lines-tail trailing))
-(global-whitespace-mode t)
 
 ;; 文件结尾
 (provide 'init-display)

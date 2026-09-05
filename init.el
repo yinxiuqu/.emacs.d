@@ -91,6 +91,7 @@
               haskell-mode jedi lsp-pyright lsp-ui minuet org
               py-autopep8 pyvenv restart-emacs smartparens use-package
               yasnippet yasnippet-snippets))
+ '(safe-local-variable-directories '("/home/yinxiuqu/quantming/"))
  '(safe-local-variable-values
    '((python-shell-interpreter-args . "-i")
      (python-shell-interpreter
