@@ -7,6 +7,7 @@ desktop/
 eshell/
 tree-sitter/
 .lsp-session-v1
+session.*
 tramp
 network-security.data
 url/
