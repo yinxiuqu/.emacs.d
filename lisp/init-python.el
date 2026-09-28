@@ -31,17 +31,19 @@
   (setq lsp-pyright-executable "/home/yinxiuqu/anaconda3/bin/pyright"))
 
 ;; ---------- LSP：ruff 风格检查（附加客户端，与 pyright 共存） ----------
-;; ruff 0.4+ 自带 LSP 服务器（lsp-ruff 包已从 MELPA 下架，直接注册客户端）
-;; 分工：pyright 管类型，ruff 管风格（未使用 import、PEP 8 等）
-(with-eval-after-load 'lsp-mode
-  (lsp-register-client
-   (make-lsp-client
-    :new-connection (lsp-stdio-connection
-                     (lambda () (list (expand-file-name "~/anaconda3/bin/ruff") "server")))
-    :major-modes '(python-mode python-ts-mode)
-    :server-id 'ruff-server
-    :add-on? t
-    :priority -1)))
+;; 分工：pyright 管类型，ruff 管风格（未使用 import、PEP 8 等）。
+;;
+;; 这里不再自己 (lsp-register-client)：lsp-mode 自带 lsp-ruff 客户端就是 `ruff server'
+;; （:server-id 'ruff、:priority -2、:add-on? t、activation 为 python），并且
+;; `lsp--require-packages' 在首次调用 lsp 时必然加载它（它在 lsp-client-packages 里）。
+;; 原先另注册一个 'ruff-server 的 id，会让同一个 Python buffer 起两个 ruff 服务
+;; （重复诊断/代码动作、双份内存），故删除自定义注册，只保留内置客户端。
+;;
+;; 唯一需要设的是命令的绝对路径（GUI 启动时 PATH 不含 anaconda）。
+;; 用 with-eval-after-load 'lsp-ruff：该文件在首次 lsp 调用时才被 require，
+;; 此刻设置生效，早于客户端真正建立连接（连接时才读取 lsp-ruff-server-command）。
+(with-eval-after-load 'lsp-ruff
+  (setq lsp-ruff-server-command (list (expand-file-name "~/anaconda3/bin/ruff") "server")))
 
 ;; ---------- 保存时自动格式化（apheleia + ruff） ----------
 (use-package apheleia
