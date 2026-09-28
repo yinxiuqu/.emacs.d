@@ -2,12 +2,17 @@
 ;;                    + pyright（语言服务器）+ pyvenv（虚拟环境）
 ;; 内置 python.el + tree-sitter 语法树 + ruff 格式化/风格检查
 
+;; 注意：下面所有 hook 都挂在 `python-base-mode-hook' 而不是 python-mode-hook。
+;; 因为第 18 行把 python-mode 重映射到了 python-ts-mode，打开 .py 时实际运行的是
+;; python-ts-mode（实测：python-mode-hook 不运行，python-ts-mode-hook 与
+;; python-base-mode-hook 运行），挂在 python-mode-hook 上的设置一律不会生效。
+
 ;; ---------- 虚拟环境管理（pyvenv） ----------
 (use-package pyvenv
   :ensure t
   :config
   (setenv "WORKON_HOME" "~/anaconda3/envs")
-  (add-hook 'python-mode-hook 'pyvenv-mode))
+  (add-hook 'python-base-mode-hook 'pyvenv-mode))
 
 ;; ---------- tree-sitter 语法树模式 ----------
 ;; 让 .py 文件使用 python-ts-mode（Emacs 30 内置，语法树驱动的高亮/缩进/跳转）
@@ -20,7 +25,7 @@
 ;; ---------- LSP：pyright 语言服务器（类型检查/补全/跳转/重命名） ----------
 (use-package lsp-pyright
   :ensure t
-  :hook (python-mode . lsp-deferred)
+  :hook (python-base-mode . lsp-deferred)
   :config
   ;; pyright 装在 anaconda 里；GUI 启动时 PATH 不含 anaconda，用绝对路径确保找到
   (setq lsp-pyright-executable "/home/yinxiuqu/anaconda3/bin/pyright"))
@@ -53,8 +58,13 @@
   (interactive)
   (python-shell-send-file (buffer-file-name)))
 
-(with-eval-after-load 'python
-  (define-key python-mode-map (kbd "C-c C-f") 'python-shell-send-this-file))
+;; python-mode-map 与 python-ts-mode-map 是两张互无父子关系的独立键图（实测
+;; python-ts-mode 里 C-c C-f 仍是内置的 python-eldoc-at-point），所以这里改用
+;; python-base-mode-hook + local-set-key，python-mode / python-ts-mode 都覆盖。
+(defun my-python-bind-keys ()
+  "Python 缓冲区内的自定义按键绑定。"
+  (local-set-key (kbd "C-c C-f") #'python-shell-send-this-file))
+(add-hook 'python-base-mode-hook #'my-python-bind-keys)
 
 ;; anaconda 加入 exec-path，保证 GUI 启动时也能找到 conda 工具（ruff/pyright/python）
 (add-to-list 'exec-path "/home/yinxiuqu/anaconda3/bin")

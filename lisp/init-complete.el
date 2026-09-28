@@ -79,6 +79,15 @@
 (dolist (hook '(emacs-lisp-mode-hook lisp-mode-hook lisp-interaction-mode-hook))
   (add-hook hook #'smartparens-strict-mode))
 
+;; strict 模式会把这些键重映射为 sp-* 版本（来自 smartparens-strict-mode-map）：
+;;   C-d / <delete> / <backspace> -> sp-delete-char / sp-backward-delete-char
+;;   M-d -> sp-kill-word    C-w -> sp-kill-region    C-S-k -> sp-kill-whole-line
+;;   C-k -> sp-kill-hybrid-sexp
+;; 实测 C-k 的新行为比 kill-line 更安全：在 "(setq x| 1)" 上 kill-line 会把右括号
+;; 一起割断（破坏结构），sp-kill-hybrid-sexp 只杀到右括号之前、保持配对平衡
+;; （只有 C-u C-u C-k 才是整块杀 sexp），所以保留它。若仍想恢复原生 C-k，取消下行注释：
+;; (define-key smartparens-strict-mode-map [remap kill-line] nil)
+
 ;; 原 LaTeX 的 (sp-local-pair "$" "$") 已移除：LaTeX 现在归 electric-pair，
 ;; smartparens 在该 buffer 不启用，那条配对不会生效。原写法留此备查：
 ;;  (sp-with-modes '(LaTeX-mode)
