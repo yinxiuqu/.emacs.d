@@ -81,16 +81,21 @@
 ;; 	    (csv-align-fields nil (point-min) (point-max))))
 
 ;;
+;; package-selected-packages 只登记"配置里实际使用、且需要从 ELPA 安装"的包，
+;; 它是 package-autoremove 判断显式安装集合的依据，登记不准会误删依赖（此前 lsp-mode 的
+;; f/ht/markdown-mode/lv 就是这样丢的）或漏保自身的包。
+;; 本次校正：补上实际在用的 conda、lsp-mode；移除零引用的 flycheck、jedi、py-autopep8、
+;; yasnippet-snippets。（which-key 在 Emacs 30 是内置包，无需登记；dash/s/f/ht/lv/
+;; markdown-mode/spinner/bind-key/plz/pythonic 等是依赖，由 package.el 自动维护。）
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(apheleia auctex company copilot exec-path-from-shell flycheck
-              haskell-mode jedi lsp-pyright lsp-ui minuet org
-              py-autopep8 pyvenv restart-emacs smartparens use-package
-              yasnippet yasnippet-snippets))
+   '(apheleia auctex company conda copilot exec-path-from-shell
+              haskell-mode lsp-mode lsp-pyright lsp-ui minuet org
+              pyvenv restart-emacs smartparens use-package yasnippet))
  '(safe-local-variable-directories '("/home/yinxiuqu/quantming/"))
  '(safe-local-variable-values
    '((python-shell-interpreter-args . "-i")

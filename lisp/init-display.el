@@ -3,8 +3,10 @@
 ;; 显示时间
 (display-time)
 
-;; 编程模式下，光标在括号上时高亮另一个括号
-(add-hook 'prog-mode-hook #'show-paren-mode)
+;; 括号高亮：show-paren-mode 在 Emacs 30 里 :init-value 即为 t（干净 emacs -Q 实测也是 t），
+;; 原先的 (add-hook 'prog-mode-hook #'show-paren-mode) 属冗余代码，已移除。
+;; 注意：smartparens 接管的模式（python/haskell/org/lisp，见 init-complete.el）会启用它自己的
+;; show-smartparens-mode 并在本 buffer 关掉 show-paren，避免同一对括号被高亮两次。
 
 ;; 在 Mode line 上显示列号
 (column-number-mode t)
