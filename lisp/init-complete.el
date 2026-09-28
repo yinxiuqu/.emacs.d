@@ -90,5 +90,27 @@
 ;; 注意：C-<down> 的绑定由 init-copilot.el 统一管理（copilot 逐行接受）。
 ;; 原先这里 global-unset-key 再被 init-copilot.el 覆盖，属无效代码，已删除。
 
+;; ---------- ido：只接管文件/缓冲区切换，不接管 completing-read ----------
+;; 冲突评估（Emacs 30.1 实测）：
+;;   * (ido-mode 1) 只重绑 C-x C-f / C-x b / C-x d 等"切换类"按键，开启后
+;;     ido-everywhere 仍为 nil、completing-read-function 仍是 completing-read-default、
+;;     read-file-name-function 也不变 —— 所以 M-x、AUCTeX 的约 900 处 completing-read、
+;;     lsp-mode 的 39 处、org 的 81 处都不受影响，与 company/yasnippet 更是两条通道
+;;     （company 走 completion-at-point，不动 minibuffer）。
+;;   * (ido-everywhere 1) 则会把 completing-read-function 全局换成 ido-completing-read，
+;;     上述调用点会丢失 :annotation-function/:affixation-function 等候选元信息
+;;     （注释/附加信息不再显示），这才是"会冲突"的那一半，故不启用。
+;;     确实想全部走 ido 时，自行取消下面这一行的注释：
+;; (ido-everywhere 1)
+(require 'ido)                    ; 显式加载，保证下面的变量已定义（也避免字节编译告警）
+(ido-mode 1)                      ; 文件/缓冲区/dired 切换走 ido；与 use-file-dialog nil 互补
+(setq ido-enable-flex-matching t) ; 模糊匹配（默认只做子串匹配）；ido-case-fold 默认已为 t
+
+;; 与既有组件的配合（无需额外配置，仅记录）：
+;;   * yasnippet 的默认 prompt 链里含 yas-maybe-ido-prompt，检测到 ido-mode 会自动改用 ido
+;;   * haskell-mode 的 haskell-completing-read-function 默认就是 ido-completing-read
+;;   * lsp-mode 自带 lsp-ido.el，可用 M-x lsp-ido-workspace-symbol 以 ido 方式搜工作区符号
+;; ido 会把目录历史写到 ~/.emacs.d/ido.last（该文件已加入 .gitignore）
+
 ;; 文件结尾
 (provide 'init-complete)

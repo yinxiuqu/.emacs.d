@@ -8,6 +8,7 @@ eshell/
 tree-sitter/
 .lsp-session-v1
 session.*
+ido.last
 tramp
 network-security.data
 url/
