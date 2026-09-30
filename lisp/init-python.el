@@ -28,7 +28,23 @@
   :hook (python-base-mode . lsp-deferred)
   :config
   ;; pyright 装在 anaconda 里；GUI 启动时 PATH 不含 anaconda，用绝对路径确保找到
-  (setq lsp-pyright-executable "/home/yinxiuqu/anaconda3/bin/pyright"))
+  (setq lsp-pyright-executable "/home/yinxiuqu/anaconda3/bin/pyright")
+
+  ;; 让 pyright 用项目实际使用的环境（.dir-locals.el 里写明的 qa），
+  ;; 而不是 PATH 上的 base python（base 里缺 QUANTAXIS/tushare，会造成大片误报）。
+  ;; 注意 lsp-pyright 的语义：它把 venv-path 当作"环境目录本身"，在后面拼 bin/python，
+  ;; 并通过 python.pythonPath 下发给 pyright（实测日志：
+  ;; Setting pythonPath for service "quantming": ".../envs/qa/bin/python"），
+  ;; 而 venv-directory 只用于 locate-dominating-file 搜索、不会作为 python.venv 下发。
+  (setq lsp-pyright-venv-path "/home/yinxiuqu/anaconda3/envs/qa")
+
+  ;; QUANTAXIS 在 qa 里是 editable 安装：site-packages 下只有
+  ;; __editable__.quantaxis-2.1.0a2.pth（指向 /home/yinxiuqu/quantaxis/QUANTAXIS），
+  ;; 没有包目录，而 pyright 不跟随 .pth，所以光设解释器仍会一直报
+  ;; Import "QUANTAXIS" could not be resolved。把源码目录显式加进 extraPaths 即可解决
+  ;; （实测：boll_strategy.py 的 reportMissingImports 由 1 条降为 0 条）。
+  ;; 代价：导入一旦解析成功，pyright 会顺带报出若干真实的类型诊断（原来被"导入缺失"掩盖）。
+  (setq lsp-pyright-extra-paths ["/home/yinxiuqu/quantaxis"]))
 
 ;; ---------- LSP：ruff 风格检查（附加客户端，与 pyright 共存） ----------
 ;; 分工：pyright 管类型，ruff 管风格（未使用 import、PEP 8 等）。
@@ -44,6 +60,20 @@
 ;; 此刻设置生效，早于客户端真正建立连接（连接时才读取 lsp-ruff-server-command）。
 (with-eval-after-load 'lsp-ruff
   (setq lsp-ruff-server-command (list (expand-file-name "~/anaconda3/bin/ruff") "server")))
+
+;; ---------- 去重：不再让内置 pyflakes 后端重复报同一批问题 ----------
+;; Python buffer 里 flymake 会挂两个后端：
+;;   lsp-diagnostics--flymake-backend（pyright + ruff 的诊断）
+;;   python-flymake（Emacs 内置，跑 python-flymake-command，默认 ("pyflakes")）
+;; pyflakes 与 ruff 的 F 类规则重叠（'xxx' imported but unused、undefined name 等），
+;; 同一个问题会被报两遍（实测两个后端都会产出 :warning/:error）。这里把 python-flymake
+;; 移出本 buffer 的后端列表，诊断统一由 LSP 提供。
+;; python.el 是在 mode 体内用 (add-hook ... nil t) 挂上的，所以用 mode hook 移除即可；
+;; python-mode 与 python-ts-mode 都会跑 python-base-mode-hook，两种模式都覆盖。
+(defun my-python-drop-flymake-pyflakes ()
+  "把内置 pyflakes 后端移出本 buffer 的 flymake 后端，避免与 ruff 重复报告。"
+  (remove-hook 'flymake-diagnostic-functions #'python-flymake t))
+(add-hook 'python-base-mode-hook #'my-python-drop-flymake-pyflakes)
 
 ;; ---------- 保存时自动格式化（apheleia + ruff） ----------
 (use-package apheleia
